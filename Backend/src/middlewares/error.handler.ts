@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { ErroHandler } from "../utils/ErrorHandler";
+import { CustomError } from "../utils/ErrorHandler";
 
 export const globalErrorHandler = (
   err: any,
@@ -9,7 +9,7 @@ export const globalErrorHandler = (
 ) => {
   console.error("🔥 Error:", err);
 
-  if (err instanceof ErroHandler) {
+  if (err instanceof CustomError) {
     return res.status(err.statusCode).json({
       status: "error",
       message: err.message

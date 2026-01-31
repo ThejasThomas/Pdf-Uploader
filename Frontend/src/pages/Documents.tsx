@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Archive, FileText, Download, Trash2, Clock } from 'lucide-react';
+import { Archive, FileText } from 'lucide-react';
 import { getAllPdfs } from '../service/pdf.api';
 
 export const Documents = () => {
   const [pdfList, setPdfList] = useState<string[]>([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  console.log(setTotalPages)
 
   useEffect(() => {
     const fetchData = async () => {

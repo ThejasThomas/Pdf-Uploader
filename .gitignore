@@ -5,3 +5,6 @@ Frontend/.env
 Backend/.env
 
 Backend/uploads
+
+Frontend/dist
+Backend/dist

@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { FileText, Download, Trash2 } from "lucide-react";
+import { FileText } from "lucide-react";
 import { getExtractedPdfs } from "../service/pdf.api";
 
 export const Extracted = () => {
