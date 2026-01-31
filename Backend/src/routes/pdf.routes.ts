@@ -24,3 +24,10 @@ const upload=multer({
 })
 
 router.post('/upload',upload.single("pdf"),pdfController.upload.bind(pdfController))
+router.get("/list",pdfController.list.bind(pdfController))
+router.post("/extract",pdfController.extract.bind(pdfController))
+router.get(
+    "/extracted",
+    pdfController.listExtracted.bind(pdfController)
+)
+export default router;
