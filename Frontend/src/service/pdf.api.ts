@@ -14,7 +14,7 @@ export const uploadPdf =async(file:File)=>{
 
 export const getAllPdfs=async(page:number,limit:number)=>{
     const response =await AxiosInstance.get(`/api/pdf/list?page=${page}&limit=${limit}`);
-    return response.data.files;
+    return response.data
 }
 
 export const extractPdf=async(
@@ -31,5 +31,5 @@ export const getExtractedPdfs=async(page:number,limit:number)=>{
     const response=await AxiosInstance.get(
         `/api/pdf/extracted?page=${page}&limit=${limit}`
     )
-    return response.data.files;
+    return response.data;
 }

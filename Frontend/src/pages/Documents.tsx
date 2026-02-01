@@ -14,8 +14,9 @@ export const Documents = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const files=await getAllPdfs(page,6)
-        setPdfList(files)
+        const response=await getAllPdfs(page,6)
+        setPdfList(response.files)
+        setTotalPages(response.totalPages)
       } catch (error) {
         console.error('Error fetching PDFs:', error);
       }

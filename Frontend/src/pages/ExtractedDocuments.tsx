@@ -10,9 +10,9 @@ export const Extracted = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const files = await getExtractedPdfs(page, 6);
-      setPdfList(files);
-      setTotalPages(Math.ceil(files.length / 6) || 1);
+      const response = await getExtractedPdfs(page, 6);
+      setPdfList(response.files);
+      setTotalPages(response.totalPages);
     };
 
     fetchData();
