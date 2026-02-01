@@ -24,6 +24,7 @@ if (!fileName || !pages) {
     }
   }
   async upload(req: Request, res: Response) {
+    console.log('broo')
     try {
       if (!req.file) {
         throw new CustomError("No file Uploaded", 400);
