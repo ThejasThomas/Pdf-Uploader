@@ -52,7 +52,7 @@ export const Extracted = () => {
             {pdfList.map((file) => (
               <a
                 key={file}
-                href={`http://localhost:5000/uploads/extracted/${file}`}
+                href={`${import.meta.env.VITE_API_URI}/uploads/extracted/${file}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-300 transition-all duration-200"

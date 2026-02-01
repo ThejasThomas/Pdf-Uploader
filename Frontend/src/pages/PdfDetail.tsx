@@ -20,7 +20,7 @@ export const PdfDetail = () => {
   const [selectedPages, setSelectedPages] = useState<number[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const pdfUrl = `http://localhost:5000/uploads/originals/${fileName}`;
+  const pdfUrl = `${import.meta.env.VITE_API_URI}/uploads/originals/${fileName}`;
 
   const handlePageSelect = (pageNumber: number) => {
     setSelectedPages((prev) =>
